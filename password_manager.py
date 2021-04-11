@@ -25,14 +25,14 @@ def Password_save(name, website, password):
     global account_list
     passdict = {}
     passwords[name] += 1
-    print(passwords[name])
+    #print(passwords[name])
     if passwords[name] > 1:
         account_list[name_dict[name]][website] = password
     else:
         passdict[website] = password
         account_list.append(passdict)
         pass
-    print(account_list)
+    #print(account_list)
         
 def view_list(name):
     global account_list
@@ -93,7 +93,7 @@ def create_account():
         password = input("Enter your password ")
         name_list.append([name, password])
         print("Account created")
-        print(name_dict)
+        #print(name_dict)
         passwords[name] = 0
         menu(name)
         
